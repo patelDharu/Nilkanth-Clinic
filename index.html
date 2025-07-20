@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GlowRevive</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+
+        <!-- Menu Toggle Button (only visible on small screens) -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#team">Our Team</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+
+        <div class="header-right" id="header-right">
+            <a href="#contact" class="contact-btn">Contact Us</a>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Your Glow <span>Our Goal</span></h1>
+            <p>Advanced Solutions for Glowing Skin<br>Because your skin deserves expert care.</p>
+            <a href="#" class="hero-btn">Book Appointment</a>
+        </div>
+        <div class="hero-img">
+            <img src="model pic.png" alt="GlowRevive Model">
+        </div>
+    </section>
+    <section class="booking-form" id="booking">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="datetime-local" id="datetime" required>
+        <select id="treatment" required>
+            <option value="">Treatment Type</option>
+            <option>Diode Laser</option>
+            <option>Face PRP</option>
+            <option>RF Cavtery</option>
+            <option>Microdermabrasion</option>
+            <option>Deamaroller</option>
+            <option>Vampire Facial</option>
+            <option>Excimer Laser</option>
+            <option>Carban Facial</option>
+            <option>Chemical Peeling</option>
+            <option>Hair Transplant</option>
+            <option>Meso Theraphy</option>
+        </select>
+        <button onclick="sendToWhatsApp()">Book Appointment</button>
+    </section>
+    <section class="services-section" id="services">
+        <div class="services-header">
+            <h2>Hair Removal & Skin Rejuvenation</h2>
+            <p>
+                Explore your options with a free consultation. Our experts will guide you through our equipment and
+                address all your questions, ensuring you’re informed and confident in your choices.
+            </p>
+        </div>
+        <div class="services-cards">
+            <div class="service-card">
+                <div class="card-img">
+                    <img src="https://plus.unsplash.com/premium_photo-1661349870907-53adfc489ee2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHx8"
+                        alt="Face PRP" />
+                    <span class="play-icon">&#9658;</span>
+                </div>
+                <div class="card-content">
+                    <h3>Face PRP</h3>
+                    <p>At Affordable Price
+                        With Premium Skin Care Clinic</p>
+                    <p>Experience permanent hair removal with precision and comfort. Ideal for all skin types.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="card-img">
+                    <img src="https://media.istockphoto.com/id/1336509265/photo/close-up-of-cosmetologists-hand-making-hardware-carbon-peeling-by-young-pretty-customer-woman.webp?a=1&b=1&s=612x612&w=0&k=20&c=7nRXZxf57P_IKjnD9b8a5C1GT8YAupUXDoFrz7EnvuU="
+                        alt="Carban Facial" />
+                    <span class="play-icon">&#9658;</span>
+                </div>
+                <div class="card-content purple-bg">
+                    <h3>Carban Facial</h3>
+                    <p>At Affordable Price
+                        With Premium Skin Care Clinic</p>
+                    <p>Not sure what you need? Talk to our experts and receive a personalized skin and hair removal
+                        plan.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="card-img">
+                    <img src="https://media.istockphoto.com/id/2206709374/photo/aesthetician-applying-skincare-solution-with-brush-during-facial-treatment.webp?a=1&b=1&s=612x612&w=0&k=20&c=1Nm2ur1ws0lhWiFsXUasZvVQBbXRW6kwzbzM07_GiiQ="
+                        alt="Chemical Peeling" />
+                    <span class="play-icon">&#9658;</span>
+                </div>
+                <div class="card-content">
+                    <h3>Chemical Peeling</h3>
+                    <p>At Affordable Price
+                        With Premium Skin Care Clinic</p>
+                    <p>From anti-aging facials to pigmentation solutions – nourish your skin with the best.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- About Nilkanth Section -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-img">
+                <img src="https://plus.unsplash.com/premium_photo-1661769710171-cb43e15cd5c4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D"
+                    alt="About GlowRevive">
+            </div>
+            <div class="about-content">
+                <h2>your skin’s health is our top priority</h2>
+                <p>
+                    We specialize in advanced skin, hair, laser, and cosmetic treatments that are medically proven and
+                    tailored to your unique needs. From acne care and pigmentation to hair regrowth and anti-aging
+                    facials, our expert team ensures every treatment is safe, effective, and results-driven.
+                    GlowRevive is where confidence begins with healthy, glowing skin.
+                </p>
+                <a href="#" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-section">
+        <div class="why-header">
+            <h2>Why Choose Us</h2>
+            <p>
+                Expert, FDA-approved Electrolysis with Alpha Cell Pro. Tailored,<br> effective and the best choice for
+                smooth, hair-free results. At<br> GlowRevive, we understand that selecting a skincare clinic is <br>a
+                significant decision.
+            </p>
+        </div>
+        <div class="why-grid">
+            <div class="why-item">
+                <img src="https://plus.unsplash.com/premium_photo-1681967049326-0a340b5281ab?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZG9jdG9yJTIwdGVhbXxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Expertise">
+                <h3>Expertise and Innovation</h3>
+                <p>Our certified professionals stay updated with the latest in skin and hair technologies.</p>
+            </div>
+            <div class="why-item">
+                <img src="https://plus.unsplash.com/premium_photo-1661769310793-d565ade503d7?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1pbi1zYW1lLXNlcmllc3wxfHx8ZW58MHx8fHx8"
+                    alt="Safe Treatments">
+                <h3>Safe & Effective Treatments</h3>
+                <p>We use FDA-approved equipment and techniques to ensure your comfort and results.</p>
+            </div>
+            <div class="why-item">
+                <img src="https://plus.unsplash.com/premium_photo-1661573285316-ccc52cc94e6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHx8"
+                    alt="Personalized Care">
+                <h3>Personalized Care</h3>
+                <p>Every treatment is tailored to your unique skin type and goals, ensuring long-lasting impact.</p>
+            </div>
+    </section>
+    <div class="technicians-section" id="team">
+        <div class="container">
+            <h2 class="section-title">Meet Our Technician</h2>
+            <p class="section-description">Our 2+ years of experience and a passion for
+                personalized care. At Nilkanth, you're in trusted hands—committed to safe, effective treatments.</p>
+            <div class="technician-card">
+                <h3 class="technician-name">Ronak Bajadiya</h3>
+                <h4> [B.A.M.S]</h4>
+                <p class="technician-specialty">Expert in skin care therapies and advanced cosmetic treatments.</p>
+                <div class="technician-image-wrapper">
+                    <img src="ronak.jpg" alt="Ronak Bajadiya" class="technician-image">
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/nilkantha_skin_clinic/profilecard/?igsh=MTVuOXpsajVma2c2bA=="><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <h2 class="section-title-2" id="gallery">Explore Our Gallery</h2>
+    <div class="gallery-wrap">
+        <img src="back.png" id="backbtn">
+        <div class="gallery">
+            <div>
+                <span>
+                    <img
+                        src="1.jpg"></span>
+                <span>
+                    <img
+                        src="2.jpg"></span>
+                <span>
+                    <img
+                        src="5.jpg"></span>
+            </div>
+            <div>
+                <span>
+                    <img
+                        src="6.jpg"></span>
+                <span>
+                    <img
+                        src="7.jpg"></span>
+                <span>
+                    <img
+                        src="6.jpg"></span>
+            </div> 
+        </div>
+        <img src="next.png" id="nextbtn">
+    </div>
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <section class="contact-us-section" id="contact">
+        <div class="contact-us-wrapper">
+            <div class="leaf-decoration"></div>
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-description">
+
+                Our experts will guide you through our equipment and
+                address
+                all your questions, ensuring you're informed and confident in your choices.
+            </p>
+
+            <div class="contact-content">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary book-appointment-btn">Book Appointment</button>
+                </form>
+
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <h3>June 2025</h3>
+                        <div class="calendar-nav">
+                            <span class="arrow">&lt;</span>
+                            <span class="arrow">&gt;</span>
+                        </div>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="day-label">Mo</div>
+                        <div class="day-label">Tu</div>
+                        <div class="day-label">We</div>
+                        <div class="day-label">Th</div>
+                        <div class="day-label">Fr</div>
+                        <div class="day-label">Sa</div>
+                        <div class="day-label">Su</div>
+                        <div class="empty-day"></div>
+                        <div class="empty-day"></div>
+                        <div class="empty-day"></div>
+                        <div class="empty-day"></div>
+                        <div class="date">1</div>
+                        <div class="date">2</div>
+                        <div class="date">3</div>
+                        <div class="date">4</div>
+                        <div class="date">5</div>
+                        <div class="date">6</div>
+                        <div class="date">7</div>
+                        <div class="date">8</div>
+                        <div class="date">9</div>
+                        <div class="date selected">10</div>
+                        <div class="date">11</div>
+                        <div class="date">12</div>
+                        <div class="date">13</div>
+                        <div class="date">14</div>
+                        <div class="date">15</div>
+                        <div class="date">16</div>
+                        <div class="date">17</div>
+                        <div class="date">18</div>
+                        <div class="date">19</div>
+                        <div class="date">20</div>
+                        <div class="date">21</div>
+                        <div class="date">22</div>
+                        <div class="date">23</div>
+                        <div class="date">24</div>
+                        <div class="date">25</div>
+                        <div class="date">26</div>
+                        <div class="date">27</div>
+                        <div class="date">28</div>
+                        <div class="date">29</div>
+                        <div class="date">30</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="footer-content container">
+            <div class="footer-brand">
+                <h4 class="brand-name">Nilkanth Skin & Hair Clinic</h4>
+                <p class="brand-description">
+                    At Nilkanth, we combine science-backed treatments with a personalized
+                    approach to bring out your natural beauty.
+                </p>
+                <div class="social-links">
+
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Main Menu</h4>
+                    <ul>
+                        <li>Home</li>
+                        <li>About Us</li>
+                        <li>Service</li>
+                        <li>Our Team</li>
+                        <li>Contact Us</li>
+                        <li>Book Appointment</li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Contacts</h4>
+                    <p>Appointment Number: +91 70168 45273</p>
+                    <p>info@Nilkanth.com</p>
+                    <p>First Floor, Pavansut Medical,
+                        Inside Shreeji Hospital Building,
+                        Paliyad Road, Botad</p>
+                    <p>
+                        ⏰ Timings: Morning 9 AM to 1 PM | Evening 4 PM to 7 PM<br>
+                        📅 Open: Monday to Saturday</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nilkanth. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+</body>
+
+</html>
