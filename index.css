@@ -1,128 +1,116 @@
-html, body {
-  overflow-x: hidden;
-  position: relative;
-} 
- 
- body {
-   margin: 0;
-   font-family: 'Segoe UI', sans-serif;
-   background: #fff6f8;
-   color: #4e2a3a;
- }
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #7b4b68;
-  padding: 10px 30px;
-  color: #fff;
-  flex-wrap: wrap;
-  top: 0;              
-  left: 0;
-  width: 90%;
-  z-index: 999;   
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Header Layout */
+header {
+  background: #7b4b68;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
 
- .logo {
-   font-weight: bold;
-   font-size: 1.5em;
-   display: flex;
-   align-items: center;
- }
+/* Logo */
+.logo img {
+  height: 50px;
+}
 
- .logo img {
-   height: 60px;
-   width: auto;
-   margin-right: 10px;
- }
+/* Header Right (Contact Button) */
+.header-right {
+  display: flex;
+  align-items: center;
+}
 
- nav {
-   display: flex;
-   gap: 15px;
- }
+/* Contact Button */
+.contact-btn {
+  padding: 8px 16px;
+  background-color: #0dcaf0;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
 
- nav a {
-   color: #fff;
-   text-decoration: none;
-   font-weight: 500;
-   transition: color 0.3s ease;
- }
+.contact-btn:hover {
+  background-color: #09b4d6;
+}
 
- nav a:hover {
-   color: #ffdee9;
- }
+/* Navigation Links */
+nav {
+  display: flex;
+  gap: 20px;
+}
 
- .header-right {
-   display: flex;
-   align-items: center;
-   gap: 10px;
- }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
 
- .header-right .login {
-   color: #fff;
-   text-decoration: none;
-   font-weight: 500;
- }
+nav a:hover {
+  color: #0dcaf0;
+}
 
- .contact-btn {
-   background: #fff;
-   color: #7b4b68;
-   padding: 8px 16px;
-   border-radius: 5px;
-   text-decoration: none;
-   font-weight: 600;
-   transition: background 0.3s ease;
- }
+/* Toggle Button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
 
- .contact-btn:hover {
-   background: #fbe2ec;
- }
+.menu-toggle span {
+  background: white;
+  height: 3px;
+  width: 30px;
+  display: block;
+  border-radius: 2px;
+}
 
- /* Hamburger Button */
- .menu-toggle {
-   display: none;
-   flex-direction: column;
-   gap: 5px;
-   cursor: pointer;
- }
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
 
- .menu-toggle span {
-   background: white;
-   height: 3px;
-   width: 25px;
-   display: block;
-   border-radius: 2px;
- }
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #7b4b68;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    text-align: center;
+  }
 
- /* Responsive Styles */
- @media (max-width: 768px) {
-   .menu-toggle {
-     display: flex;
-   }
+  nav.mobile-nav.active {
+    display: flex;
+  }
 
-   nav,
-   .header-right {
-     display: none;
-     flex-direction: column;
-     width: 90%;
-     margin-top: 10px;
-   }
+  .header-right {
+    display: none;
+  }
+}
 
-   nav.active,
-   .header-right.active {
-     display: flex;
-   }
+/* Prevent horizontal scroll on all screens */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
 
-   nav a,
-   .header-right,
-   .contact-btn {
-     padding: 10px 0;
-     width: 95%;
-     text-align: left;
-   }
- }
 
  .hero {
    display: flex;
